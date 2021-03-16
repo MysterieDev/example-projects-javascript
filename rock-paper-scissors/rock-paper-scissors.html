@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <script defer src="rock-paper-scissors.js"></script>
+    <style>
+        h1,
+        h2,
+        h3,
+        p {
+            font-family: "Courier New", Courier, monospace;
+        }
+        
+        body {
+            padding: 50px;
+            background-color: lightcyan;
+        }
+        
+        h1,
+        h3,
+        p {
+            text-align: center;
+        }
+        
+        .choice {
+            transition: transform 0.2s;
+            /* Animation */
+        }
+        
+        .choice:hover {
+            transform: scale(1.2);
+            /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        
+        .selected {
+            background-color: linen;
+        }
+        
+        #startButton {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui container">
+        <h1 class="ui center heading">Your pick</h1>
+        <div class="ui three column stackable centered grid">
+            <div class="column">
+                <h3>Paper</h3>
+                <img id="paper" class="ui centered small image choice" src="paper.png" />
+            </div>
+            <div class="column">
+                <h3>Rock</h3>
+                <img id="rock" class="ui centered small image choice" src="rock.png" />
+            </div>
+            <div class="column">
+                <h3>Scissors</h3>
+                <img id="scissors" class="ui centered small image choice" src="scissors.png" />
+            </div>
+            <div class="column">
+                <button id="startButton" class="ui primary button" disabled>
+            pick a choice
+          </button>
+            </div>
+        </div>
+        <div class="ui three column stackable centered grid">
+            <div class="column">
+                <h1 class="ui center heading">Enemy pick</h1>
+                <img id="enemy" class="ui centered small image" src="enemy.png" />
+                <h3 id="resultMessage"></h3>
+            </div>
+        </div>
+        <h1 class="ui center heading">Score</h1>
+        <div class="ui three column stackable centered grid">
+            <div class="column">
+                <h3>WINS</h3>
+                <p id="won">0</p>
+            </div>
+            <div class="column">
+                <h3>LOOSES</h3>
+                <p id="lost">0</p>
+            </div>
+            <div class="column">
+                <h3>DRAWS</h3>
+                <p id="draw">0</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+:root {
+    --top: 0px;
+    --topShot: 320px;
+}
+
+body {
+    margin-top: 80px;
+}
+
+.cup-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+}
+
+.beerCup {
+    max-width: 80px;
+}
+
+
+/*Ball*/
+
+#ellipse-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+ellipse {
+    fill: hsl(0, 0%, 90%);
+    stroke: black;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+
+/*Animation*/
+
+.shootX {
+    animation: shootX 1.5s infinite linear;
+}
+
+@keyframes shootX {
+    0% {
+        left: 0px
+    }
+    25% {
+        left: 125px
+    }
+    50% {
+        left: 0px
+    }
+    75% {
+        left: -125px
+    }
+    100% {
+        left: 0px
+    }
+}
+
+.shootY {
+    animation: shootY 1.5s infinite linear;
+}
+
+@keyframes shootY {
+    0% {
+        top: 0px
+    }
+    50% {
+        top: 200px
+    }
+    100% {
+        top: 0px
+    }
+}
+
+@keyframes fadeAway {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.Shoot {
+    animation: Shoot 1s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+}
+
+@keyframes Shoot {
+    0% {
+        top: var(--top)
+    }
+    100% {
+        top: var(--topShot)
+    }
+}
+
+
+/* Action Button*/
+
+.actionButtonStyle {
+    margin: 0 auto;
+    max-width: 200px;
+    padding-top: 30%;
+    display: none;
+}
+
+#actionButton {
+    background-color: orangered;
+    font-family: fantasy;
+    font-size: 2rem;
+}

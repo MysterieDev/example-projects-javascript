@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <script defer src="json-posts.js"></script>
+    <style>
+        .container {
+            margin: 50px;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .card {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui container">
+        <h2 class="ui heading">These are the News!</h2>
+        <div class="ui four column stackable centered grid">
+            <div class="ui primary button" onclick="addPostsToSite()">
+                load more posts
+            </div>
+            <button class="ui primary button" onclick="makeThreeColumns()">
+          three columns
+        </button>
+            <button class="ui primary button" onclick="makeTwoColumns()">
+          two columns
+        </button>
+            <button class="ui primary button" onclick="makeOneColumn()">
+          one column
+        </button>
+        </div>
+        <div id="postWrapper" class="ui three column stackable centered grid"></div>
+    </div>
+</body>
+
+</html>

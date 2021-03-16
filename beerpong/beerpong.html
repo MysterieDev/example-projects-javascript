@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Beer Pong</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="cup.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body id="body">
+    <div class="cup-row">
+        <img src="cup.png" class="beerCup" />
+        <img src="cup.png" class="beerCup" />
+        <img src="cup.png" class="beerCup" />
+    </div>
+    <div class="cup-row">
+        <img src="cup.png" class="beerCup" />
+        <img src="cup.png" class="beerCup" />
+    </div>
+    <div class="cup-row">
+        <img src="cup.png" class="beerCup" />
+    </div>
+    <div id="ellipse-div">
+        <svg class="ball" id="ball">
+        <ellipse cx="25" cy="25" rx="24" ry="24" />
+      </svg>
+    </div>
+    <div class="actionButtonStyle">
+        <button id="actionButton">Nächster Wurf</button>
+    </div>
+</body>
+<script src="script.js" defer></script>
+
+</html>

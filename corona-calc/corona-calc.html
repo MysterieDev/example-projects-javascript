@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corona Calc</title>
+    <script src="corona-calc.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <style>
+        .ui.labeled.input {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui container">
+        <h1 class="ui heading">Berechne mögliche Corona-Szenarien</h1>
+        <div class="ui labeled input">
+            <div class="ui label">Wachstumsrate</div>
+            <input id="growthrate" type="number" min="1" step="0.1" />
+        </div>
+        <small>Wieviel Personen steckt diese Person nach einem Tag an.</small>
+        <br />
+        <div class="ui labeled input">
+            <div class="ui label">Anzahl der infizierten zu Beginn</div>
+            <input id="start" type="number" min="1" step="1" />
+        </div>
+        <br />
+        <div class="ui labeled input">
+            <div class="ui label">
+                Anzahl der Tage: <span id="daysView">1</span>
+            </div>
+            <input id="days" type="range" min="1" max="30" step="1" />
+        </div>
+        <br />
+
+        <h3 class="ui heading">
+            Infizierte zu angegebenen Werten: <span id="result"></span>
+        </h3>
+    </div>
+</body>
+
+</html>
